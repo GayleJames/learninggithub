@@ -7,6 +7,7 @@
  *
  * As always, this should be used as part of a multi-step dispositioning process
  * in order to increase fidelity of reports.
+ * modified to correct re1
  */
 rule CredentialGeneric {
     meta:
