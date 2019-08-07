@@ -18,7 +18,8 @@ rule CredentialGeneric {
         //       NEW-LINE characters would be matched by this class.
         //$password = /(secret|password)( |\t)*?=( |\t)+?("|')*?[^\n"']+?("|')*?( |\t)*?[\n]+?/ nocase wide ascii
         //anything 'password or secret' inside quotes
-          $re1 = /(secret|password|pswd|passwd)( |\t)*?=( |\t)*?[^%|*](\"|')\S+?(\"|') / nocase wide ascii
+        //  $re1 = /(secret|password|pswd|passwd)( |\t)*?=( |\t)*?[^%|*](\"|')\S+?(\"|') / nocase wide ascii
+          $re1 = /(secret|password|pswd|passwd)( |\t)*?=( |\t)*?("|')\S+?("|')/ nocase wide ascii
         //  $password2 = /(secret|password)[ =\t]?["'](true|false);?/ nocase wide ascii
           $re2 = /(secret|password)( |\t)*?=( |\t)*?(false|true)/ nocase wide ascii
           //$re3 = /(secret|password)( |\t)*?=( |\t)*?([^"'\W][a-zA-z])/ nocase wide ascii
